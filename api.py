@@ -4,7 +4,6 @@ from flask import Flask,request
 import json
 import os.path
 from os import path
-import tokenGen
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
@@ -95,4 +94,4 @@ def device():
         resp[zoneList[i].player_name] = zoneList[i].ip_address
     return resp
 
-app.run()
+app.run(host='0.0.0.0')
